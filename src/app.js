@@ -4,7 +4,7 @@ const morgan = require('morgan');
 const cors = require('cors');
 const helmet = require('helmet');
 
-const { NODE_ENV, USER, PASS } = require('./config');
+const { NODE_ENV, USERNAME, PASSWORD } = require('./config');
 
 const app = express();
 const jsonBodyParser = express.json();
@@ -21,8 +21,8 @@ let transport = {
   host: 'smtp.gmail.com',
   port: 587,
   auth: {
-    user: USER,
-    pass: PASS,
+    user: USERNAME,
+    pass: PASSWORD,
   },
 };
 
